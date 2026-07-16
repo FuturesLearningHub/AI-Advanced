@@ -24,6 +24,17 @@
 <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
 <link rel="stylesheet" href="../assets/css/styles.css?v=1">
+<style>
+  /* skill pills (course-level) */
+  .skills { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1.5rem; }
+  .skills__label { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: .7rem; color: var(--vu-gold-flat); margin-right: .25rem; }
+  .skillpill { display: inline-block; font-family: var(--font-condensed); font-weight: 700;
+    text-transform: uppercase; letter-spacing: .06em; font-size: .68rem; line-height: 1.3;
+    padding: .3rem .65rem; border-radius: 999px; border: 1px solid rgba(207,174,112,.55);
+    color: rgba(255,255,255,.85); }
+  .skillpill--core { background: var(--vu-gold-flat); border-color: var(--vu-gold-flat); color: var(--vu-black); }
+</style>
 
 <style>
 /* ============ facilitator edition ============ */
@@ -172,6 +183,14 @@
           <li>Recognize the agent loop, name its documented failure modes, and place the human checkpoint</li>
           <li>Classify information into governance tiers and build one real, governed AI workflow for your team</li>
         </ol>
+      </div>
+      <div class="skills" data-reveal aria-label="Skills this course builds">
+        <span class="skills__label">Skills you'll build</span>
+        <span class="skillpill skillpill--core">Embodies an entrepreneurial spirit and leverages data and technology</span>
+        <span class="skillpill skillpill--core">Makes effective and ethical decisions for the University</span>
+        <span class="skillpill">Artificial Intelligence</span>
+        <span class="skillpill">Data Governance</span>
+        <span class="skillpill">Risk Management</span>
       </div>
       <div class="hero__cta" data-reveal>
         <a class="btn" href="#s-attention">Begin the session</a>
