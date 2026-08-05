@@ -32,7 +32,15 @@
   .mins { font-family: 'Antonio', Impact, sans-serif; font-size: 11px; color: #946E24;
     letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
   .sec { border: 1px solid #E4E4E4; border-left: 3px solid #CFAE70; border-radius: 4px;
-    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid; }
+    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid;
+    display: grid; grid-template-columns: 290px 1fr; gap: 16px; align-items: start; }
+  .sec.noimg { grid-template-columns: 1fr; }
+  .sec.noimg .sec__shot { display: none; }
+  .sec__shot { position: sticky; top: 12px; }
+  .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__notes { min-width: 0; }
+  @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -81,6 +89,8 @@
   </div>
 
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the frame: same fundamentals as 101, now open the hood.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome back. Point your camera at that code before we start. You've all taken AI Basics, so you can write a prompt. Today we open the hood: why tools forget, where answers actually come from, what happens when AI starts taking actions, and how to run all of it responsibly. Still no code. Still no math.&rdquo;</p>
@@ -91,8 +101,11 @@
     <p class="mini"><b>Watch for:</b> Anyone who hasn't taken AI Basics: pair them with a veteran neighbor and point them at the 101 link in the footer for after.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll be able to do in ninety minutes.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: one scan prompt, state the frame, move on.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: six capabilities, ending in a real governed workflow with a run date.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six things by the end: you'll explain why long chats lose the thread, what retrieval actually fixes, when to prompt versus RAG versus fine-tune, four prompt patterns beyond the basics, how agents fail and where the human checkpoint goes, and how to tier information before it ever touches a tool. It all lands in one artifact: a governed workflow card for a task you actually do.&rdquo;</p>
@@ -103,8 +116,11 @@
     <p class="mini"><b>Watch for:</b> Anxiety about the word 'governance.' Defuse early: it's three colors and four questions, not a compliance seminar.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Seven ideas, and the first one explains half the mysteries you've already met.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: objectives 1 and 6 out loud; the rest on screen.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Three moves: how the machine works, what happens when it starts acting on its own, and how you keep all of it honest.&rdquo;</p>
@@ -115,8 +131,11 @@
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the window, because it explains the single most common complaint about these tools.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip entirely; the deck's structure carries it.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-attention.jpg" alt="Slide: 01 · Context &amp; attention" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>01 · Context &amp; attention <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install the context-window mental model so 'it forgot' becomes a diagnosable, fixable event instead of a mystery.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Here's the secret that explains half the weird behavior you've seen: the model has no memory. Every single turn, it re-reads your conversation through a window of fixed size, and attention decides which parts of that window matter for the next word. Twenty messages in, your opening instruction can fall out of the window entirely. It's not disobeying you; for that answer, your instruction never existed. Drag the slider and watch it happen.&rdquo;</p>
@@ -127,8 +146,11 @@
     <p class="mini"><b>Watch for:</b> The word 'attention' drifting into psychology. Keep it mechanical: everything in the window competes; the winners shape the next word.</p>
     <p class="mini"><b>Transition:</b> &ldquo;The window explains forgetting. The next idea explains the other mystery: where answers come from when the model can't possibly know.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: simulator plus check plus one-line habits; cut the video (assign) and the pair share.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock the session's warning label before the tooling continues.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;A wrong answer sounds exactly as confident as a right one.&rdquo;</p>
@@ -139,8 +161,11 @@
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Which is why the next tool exists: giving the model receipts.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip; say the line yourself as you pass it.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-rag.jpg" alt="Slide: 02 · Grounding with RAG" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>02 · Grounding with RAG <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install the RAG mental model, retrieval fixes the raw material, not the brain, and surface where it belongs in learners' own work.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;A model's training data is a photograph of the internet, taken a while ago. Ask it about YOUR policies and it does the only thing it can: guess fluently. Retrieval-Augmented Generation changes the supply chain: before answering, the system fetches your real, current documents and hands them to the model. Watch the same question twice. RAG doesn't make the model smarter; it makes the raw material trustworthy, and it hands you a citation you can actually click.&rdquo;</p>
@@ -151,8 +176,11 @@
     <p class="mini"><b>Watch for:</b> Over-correction into 'so RAG solves hallucination.' The simulator's grounded answer still deserves a click on its citation; say so explicitly.</p>
     <p class="mini"><b>Transition:</b> &ldquo;So when do you prompt, when do you retrieve, and when do you reach for the heavy machinery? There's a framework, and it starts cheap.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: simulator plus check; cut the video (assign) and collect only two backlog questions.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-method.jpg" alt="Slide: 03 · Choosing your method" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>03 · Choosing your method <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install the cheapest-first decision framework (prompting → RAG → fine-tuning) and practice it to a one-sentence justification.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Three tools, wildly different price tags. Prompting costs minutes and changes freely. RAG costs a document library and someone to keep it current. Fine-tuning costs training data, compute, evaluation, and doing it all again every time the underlying model updates, which is often. So the framework is three questions asked in order, and most teams should stop at the first yes: can a better prompt fix it? Does the task need current or internal facts? Does it genuinely need a permanent behavior change at scale? Start cheap. Escalate on evidence.&rdquo;</p>
@@ -163,8 +191,11 @@
     <p class="mini"><b>Watch for:</b> The enthusiast who wants to fine-tune everything. The framework is the kind answer: 'show me the evidence the cheaper rungs failed.'</p>
     <p class="mini"><b>Transition:</b> &ldquo;For most of you, the answer will be 'a better prompt.' So let's upgrade what a better prompt means: four patterns past the basics.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: cards fast, matcher on devices, skip the pair activity; the justification habit gets one worked example from you instead.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-patterns.jpg" alt="Slide: 04 · Advanced prompt patterns" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>04 · Advanced prompt patterns <span class="mins">Full 11 min · Core 7</span></h2>
     <p class="purpose">Install the four patterns as sight-recognizable tools and get each learner one rewrite of a real prompt.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;AI Basics gave you the four-part prompt. These four patterns are the next gear, and each one has a trigger you'll learn to hear. The model keeps formatting things wrong? Stop describing, start showing: Few-Shot. Multi-step logic coming back subtly broken? Make it think out loud: Chain-of-Thought. Same report every week? Hand it your structure once: Template. And my favorite: you don't actually know what you need? Flip it: 'ask me clarifying questions before you attempt this.' The model becomes the consultant.&rdquo;</p>
@@ -175,8 +206,11 @@
     <p class="mini"><b>Watch for:</b> Pattern-collecting without application. The drill is the point; the matcher is just the warm-up. Protect the drill minutes.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Everything so far is a model answering you. Now the bigger shift: what happens when it starts DOING things.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: cover Chain-of-Thought and Flipped in voice, all four on screen; matcher stays, drill shrinks to writing the rewrite without the neighbor swap.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-agents.jpg" alt="Slide: 05 · Multimodal &amp; agentic AI" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>05 · Multimodal &amp; agentic AI <span class="mins">Full 11 min · Core 7</span></h2>
     <p class="purpose">Install the plan-act-observe loop, make the three documented failure modes sight-readable, and set up the checkpoint decision the capstone requires.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Until now, the model answers and you act. An agent flips that: you give it a goal, and it runs a loop: plan the steps, act with tools, observe what happened, repeat until done. Or until it breaks, and here's the useful news: it breaks in specific, documented ways. It calls the wrong tool. It misreads what a tool told it. Or it loops forever because nobody gave it an exit. The fix is never 'trust it more.' It's scoped tools, step limits, and a human checkpoint before anything ships. You're about to read five real-style traces and catch the failures yourself.&rdquo;</p>
@@ -187,8 +221,11 @@
     <p class="mini"><b>Watch for:</b> Both ditches: 'agents are magic' and 'agents are terrifying.' The traces are the antidote to both: specific failures, specific fixes.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Checkpoints catch what the machine gets wrong. But can YOU catch it? Let's find out, six answers, real or invented.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: cut the video (assign); failure cards, trainer, and a one-voice version of the checkpoint question stay.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-halluc.jpg" alt="Slide: 06 · Spot the hallucination" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>06 · Spot the hallucination <span class="mins">Full 7 min · Core 5</span></h2>
     <p class="purpose">Calibrate hallucination detection by hand, then name the discipline that does it at scale: red-teaming and evaluation.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six answers, all generated by AI, all delivered with identical confidence. Some are accurate. Some are invented. Your job: call each one. And here's why this game matters: a hallucinated answer sounds exactly as confident as a correct one. Fluency and accuracy are separate qualities, and your ear can't always tell them apart, which is precisely why organizations red-team these systems instead of vibing them.&rdquo;</p>
@@ -199,8 +236,11 @@
     <p class="mini"><b>Watch for:</b> Overconfidence from a good score. The debrief line matters: these were TRYING to be catchable. The habit beats the instinct.</p>
     <p class="mini"><b>Transition:</b> &ldquo;One skill left: deciding what information is allowed near these tools in the first place. Three colors, four functions, and then you build.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: keep at nearly full length; this is the session's signature moment. Run it as a fast room vote.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-govern.jpg" alt="Slide: 07 · Governance" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>07 · Governance <span class="mins">Full 8 min · Core 5</span></h2>
     <p class="purpose">Make NIST's four functions a usable checklist and drill the tiering habit that prevents most real incidents.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Last concept, and it's four questions and three colors. The NIST AI Risk Management Framework sounds like homework; it's actually the questions a reasonable adult asks about any tool: who decides, Govern. What are we running, Map. How do we know it works, Measure. What do we do about what we find, Manage. And the three colors are the ones you already know from AI Basics: green public, yellow internal and company-managed tools only, red sensitive, named approval or no AI at all. Tier first, prompt second. That single habit prevents most of the incidents that make the news.&rdquo;</p>
@@ -211,8 +251,11 @@
     <p class="mini"><b>Watch for:</b> Governance fatigue in the room's body language. The energy move: this is the shortest section, and it ends in the capstone they've been building toward all session.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Toolkit complete. Quiz first, then the card that puts all of it on one page.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: function cards in one minute, sorter on devices, skip the four-functions group exercise; the capstone's tier field carries the habit.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the six objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per objective. This is the systems check before you build the workflow that leaves the room with you.&rdquo;</p>
@@ -223,8 +266,11 @@
     <p class="mini"><b>Watch for:</b> Racing. Frame it as a systems check before the build, not a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the artifact this whole session was aiming at.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: keep at full length; this is the objectives' evidence.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · Team AI workflow" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Capstone · Team AI workflow <span class="mins">Full 8 min · Core 6</span></h2>
     <p class="purpose">Convert the session into one governed, dated workflow card: the transfer artifact, the Level 3 seed, and the input to the 30-day census.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;One card, five decisions, and everything from today is on it. The trigger: what starts the workflow. The AI step: what the model actually does, and notice the safe verbs are draft, sort, and summarize, not send. The pattern that carries it. The human checkpoint that clears it. And the tier that governs it. Build it for the task you brought. When you're done, show one neighbor and take one piece of feedback; workflows survive contact with a second brain much better than with none.&rdquo;</p>
@@ -235,8 +281,11 @@
     <p class="mini"><b>Watch for:</b> Red-tier workflows sailing through on autopilot; that warning is the most important sentence some learners will read today. Also watch for AI steps with no checkpoint logic: 'draft' is safe, 'send' is not.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Reference shelf in one breath, and then the send-off.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: protect at full length minus the peer-feedback swap; never cut the capstone itself.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here, flip cards, whenever you need the vocabulary back, including in the meeting where a vendor starts using it at you.&rdquo;</p>
@@ -247,8 +296,11 @@
     <p class="mini"><b>Watch for:</b> Don't tour all thirteen cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One run left.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip; point at it verbally from the closing slide.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Convert cards into public commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Here's the whole session in one breath: the window explains the forgetting, retrieval grounds the answers, the framework starts cheap, the patterns upgrade your prompts, agents get checkpoints, your detector needs a habit, and information gets tiered before it gets pasted. You have a card with all five decisions made. Before you go: what's the trigger, and what's the tier? Say it out loud.&rdquo;</p>
@@ -259,6 +311,7 @@
     <p class="mini"><b>Watch for:</b> Cards that quietly skipped the tier decision. The commitment round catches them: no tier, no commitment; help them pick one on the spot.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Go run it. And when the checkpoint catches something, and it will, write it down; that note is the best AI education you'll get all month.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
+    </div>
   </div>
   <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </div>
