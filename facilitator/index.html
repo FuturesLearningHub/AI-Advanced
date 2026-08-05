@@ -23,7 +23,7 @@
 <link rel="preload" href="../assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="../assets/css/styles.css?v=1">
+<link rel="stylesheet" href="../assets/css/styles.css?v=11">
 <style>
   /* skill pills (course-level) */
   .skills { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1.5rem; }
@@ -115,13 +115,17 @@
   </nav>
 </header>
 
-<!-- deck dot rail + control bar -->
-<div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
-<div class="deckbar" role="group" aria-label="Presentation controls">
-  <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-  <span class="deckbar__count" id="deckCount">1 / 15</span>
-  <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+<!-- bottom navigation bar -->
+<div class="bottombar" role="group" aria-label="Presentation controls">
+  <span class="bottombar__title" id="barTitle"></span>
+  <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
+  <div class="bottombar__ctrl">
+    <span class="bottombar__count" id="deckCount">1 / 15</span>
+    <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
 </div>
+<button class="scrollhint" id="scrollHint" type="button" aria-label="Scroll for more on this screen">Scroll for more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
 
 <main class="deck" id="top">
 
@@ -745,12 +749,7 @@
         <a class="btn btn--ghost" href="#s-recap">Retake the quiz</a>
       </div>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator</span><span>Full 3 min · Core 2</span></div><p class="facnote__purpose">Convert cards into public commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Here's the whole session in one breath: the window explains the forgetting, retrieval grounds the answers, the framework starts cheap, the patterns upgrade your prompts, agents get checkpoints, your detector needs a habit, and information gets tiered before it gets pasted. You have a card with all five decisions made. Before you go: what's the trigger, and what's the tier? Say it out loud.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Read the featured card: the one next step is running the workflow, once, checkpoint and all, within 7 days.</li><li>Run the fist-to-five (Level 1): 'On a fist to five, how ready do you feel to run your workflow?' Scan and remember the number for your session log.</li><li>Run the commitment round, popcorn style: trigger and tier, out loud or in chat.</li><li>Point at the cheat sheet and workflow card buttons, and the Jules White course for pattern depth.</li><li>Tell them the 7-day pulse and 30-day census are coming, then land the last line and stop on time.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;Around the room, one line each: your workflow's trigger, and its tier.&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>'Friday status report, yellow'</li><li>'Inbox triage every morning, green'</li><li>Someone admits theirs came out red</li></ul><p class="facnote__mini">Respond: Thank each one, no commentary. For the red admission, publicly and warmly: 'That card just did its job. Redesign the AI step or get the named approval, and either way you found out today instead of in an incident report.'</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">The session's success metric isn't in this room; it's the 30-day census: how many teams have a written, tiered workflow running. Your card is one of them.</p></div><p class="facnote__meta"><b>Validate:</b> Fist-to-five mostly 3+ (Level 1); a majority state a trigger-and-tier out loud or in chat. Count both; with the pulse and census, that's your evidence chain.</p><p class="facnote__meta"><b>Watch for:</b> Cards that quietly skipped the tier decision. The commitment round catches them: no tier, no commitment; help them pick one on the spot.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Go run it. And when the checkpoint catches something, and it will, write it down; that note is the best AI education you'll get all month.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p></aside>
-  </section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
+  <!-- ============ FOOTER ============ -->
 <footer class="footer" aria-labelledby="footHead">
   <div class="wrap">
     <div class="footer__grid">
@@ -775,6 +774,7 @@
           <li><a href="#s-recap">Knowledge Check</a></li>
           <li><a href="#s-plan">My AI Workflow</a></li>
           <li><a href="https://me5231979.github.io/AI_Classroom/">AI Basics (101)</a></li>
+          <li><a href="web/">Self-paced version</a></li>
           <li><a href="https://me5231979.github.io/Course_Library/">Course Library</a></li>
           <li><a href="#top">Start Over</a></li>
         </ul>
@@ -786,8 +786,14 @@
     </div>
   </div>
 </footer>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator</span><span>Full 3 min · Core 2</span></div><p class="facnote__purpose">Convert cards into public commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Here's the whole session in one breath: the window explains the forgetting, retrieval grounds the answers, the framework starts cheap, the patterns upgrade your prompts, agents get checkpoints, your detector needs a habit, and information gets tiered before it gets pasted. You have a card with all five decisions made. Before you go: what's the trigger, and what's the tier? Say it out loud.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Read the featured card: the one next step is running the workflow, once, checkpoint and all, within 7 days.</li><li>Run the fist-to-five (Level 1): 'On a fist to five, how ready do you feel to run your workflow?' Scan and remember the number for your session log.</li><li>Run the commitment round, popcorn style: trigger and tier, out loud or in chat.</li><li>Point at the cheat sheet and workflow card buttons, and the Jules White course for pattern depth.</li><li>Tell them the 7-day pulse and 30-day census are coming, then land the last line and stop on time.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;Around the room, one line each: your workflow's trigger, and its tier.&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>'Friday status report, yellow'</li><li>'Inbox triage every morning, green'</li><li>Someone admits theirs came out red</li></ul><p class="facnote__mini">Respond: Thank each one, no commentary. For the red admission, publicly and warmly: 'That card just did its job. Redesign the AI step or get the named approval, and either way you found out today instead of in an incident report.'</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">The session's success metric isn't in this room; it's the 30-day census: how many teams have a written, tiered workflow running. Your card is one of them.</p></div><p class="facnote__meta"><b>Validate:</b> Fist-to-five mostly 3+ (Level 1); a majority state a trigger-and-tier out loud or in chat. Count both; with the pulse and census, that's your evidence chain.</p><p class="facnote__meta"><b>Watch for:</b> Cards that quietly skipped the tier decision. The commitment round catches them: no tier, no commitment; help them pick one on the spot.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Go run it. And when the checkpoint catches something, and it will, write it down; that note is the best AI education you'll get all month.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p></aside>
+  </section>
+
+</main>
+
+
 
 <script src="../assets/js/qrcode.js?v=1"></script>
-<script src="../assets/js/main.js?v=1"></script>
+<script src="../assets/js/main.js?v=11"></script>
 </body>
 </html>
