@@ -1,12 +1,12 @@
 # AI 201: Beyond the Basics — Vanderbilt Learning Series
 
 Single-page interactive classroom experience (Learning on Demand). Live at
-https://me5231979.github.io/AI-Advanced/ (GitHub Pages, `gh-pages` branch —
+https://futureslearninghub.github.io/AI-Advanced/ (GitHub Pages, `gh-pages` branch —
 publish with `git branch -f gh-pages main && git push -f origin gh-pages`).
 
-Sequel to AI Basics (me5231979/AI_Classroom); sister programs
+Sequel to AI Basics (FuturesLearningHub/AI_Classroom); sister programs
 Difficult_Conversations and Coaching-for-Performance; catalog at
-me5231979/Course_Library. Same engine, same standing principles.
+FuturesLearningHub/FLH-Learning-Library-. Same engine, same standing principles.
 
 ## Standing design principles (do not regress these)
 

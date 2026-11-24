@@ -7,11 +7,11 @@ and work every exercise on their own devices, or share the link for
 self-paced review. Still no code, still no math.
 
 Part of the Vanderbilt Learning Series. Catalog:
-[Course Library](https://me5231979.github.io/Course_Library/) ·
-Prerequisite: [AI Basics](https://me5231979.github.io/AI_Classroom/)
+[Course Library](https://flh-learning-library.vercel.app/) ·
+Prerequisite: [AI Basics](https://futureslearninghub.github.io/AI_Classroom/)
 
-- **Learner edition:** https://me5231979.github.io/AI-Advanced/
-- **Facilitator edition:** https://me5231979.github.io/AI-Advanced/facilitator/
+- **Learner edition:** https://futureslearninghub.github.io/AI-Advanced/
+- **Facilitator edition:** https://futureslearninghub.github.io/AI-Advanced/facilitator/
 
 ## Running it
 
